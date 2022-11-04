@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Utilizando Hoisting</p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        minhaFuncao()
+        function minhaFuncao() {
+            let a = 4//variavel local
+            document.getElementById("demo").innerHTML = a * a
+        }
+        //minhaFuncao()
+
+        let a = 5 //variavel global
+        minhaFuncao1()
+        function minhaFuncao1() {
+
+            document.getElementById("demo1").innerHTML = a * a
+        }
+        //minhaFuncao()
+    </script>
+</body>
+
+</html>
